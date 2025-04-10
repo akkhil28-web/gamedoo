@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameDoo</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@500&family=Playfair+Display&family=Roboto+Condensed&family=Tinos&display=swap"
+        rel="stylesheet">
+    <style>
+        *::-webkit-scrollbar {
+            display: none;
+        }
+        * {
+            text-decoration: none;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .nav{
+            display: flex;
+            position: absolute;
+            flex-direction: row;
+            margin-top: 10px;
+            padding-left: 1vw;
+        }
+        #fi{
+            display: flex;
+            flex-direction: row;
+            width: 176.758px;
+            height: 57.0391px;
+            margin-right: -582.2px;
+        }
+        #box{
+            display: flex;
+            box-sizing: border-box;
+            border-color: transparent;
+            cursor: pointer;
+            position: relative;
+            flex-direction: column;
+            background-color: #f1f1f190;
+            width: 38vw;
+            height: 50.0391px;
+            border-radius: 7px;
+            color: gray;
+            margin-left: 685px;
+            margin-right: 25px;
+            padding-left:15px;
+        }
+        .me{
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            padding-top:10px;
+            margin-top: 80px;
+            padding-left: 0px;
+            background-color:white;
+            border-color: white;
+            background: white;
+            background-color: white;
+        }
+        .ph{
+            display: flex;
+            flex-direction: row;
+            width: 40px;
+            height: 20px;
+            margin-top: 0px;
+        }
+        .menu{
+            display: flex;
+            cursor: pointer;
+            flex-direction: row;
+            background-color: transparent;
+            border-color: transparent;
+            background: transparent;
+            margin-bottom: 20px;
+            width: 220px;
+            height: 43px;
+            border-radius: 9px;
+            padding-top: 10px;
+            font-size: medium;
+            /* font-family: 'Inter'; */
+            /* font-weight: 10; */
+            font-style: normal;
+        }
+        #se{
+            display: flex;
+            flex-direction: column;
+            width: 13px;
+            height: 13px;
+            padding-top: 0.4vw;
+        }
+        #dash{
+            color: white;
+            background-color: #4B0ACE;
+        }
+        #head{
+            display: flex;
+            position: absolute;
+            flex-direction: column;
+            width: 700px;
+            height:300px;
+            margin-top: 70px;
+            color: white;
+            padding: 1px;
+            padding-left: 0px;
+            margin-left: 280px;
+            border-radius: 10px;
+            background-color: #4B0ACE;
+        }
+        #roc{
+            width: 200px;
+            height: 250px;
+            margin-left: 450px;
+            margin-top: 10px;
+            /* padding-top: -120px; */
+            margin-right: 0px;
+            /* padding-left: 100px; */
+        }
+        p{
+            margin-top: -200px;
+            font-size: medium;
+            padding-left: 20px;
+            padding-right: 490px;
+        }
+        h1{
+            padding-top: 0px;
+            padding-left: 20px;
+            padding-right: 275px;
+            padding-bottom: 20px;
+        }
+        #but{
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: orange;
+            width: 175px;
+            height: 50px;
+            font-weight: bold;
+            border-radius: 10px;
+            margin-bottom: 0px;
+            padding-bottom: 0px;
+            margin-left: 20px;
+            border-color: #4B0ACE;
+        }
+        .di{
+            display: flex;
+            margin-right: 5px;
+        }
+        #pg
+        {
+            display: flex;
+            position: absolute;
+            flex-direction: column;
+            margin-top: 390px;
+            margin-left: 295px;
+        }
+        h2{
+            display: flex;
+            position: relative;
+            flex-direction: row;
+        }
+        #arrow{
+            margin-top: 5px;
+            margin-left: 5px;
+        }
+        .ci{
+            width: 40px;
+            height: 40px;
+            border-radius: 100px;
+            background-color: #FAFBFC;
+            margin-left: -230px;
+        }
+        #c1{
+            margin-left: 20px;
+        }
+        #c2{
+            margin-left: 20px;
+        }
+        #c3{
+            margin-left: 20px;
+        }
+        .fire{
+            display: flex;
+            cursor: pointer;
+            justify-content: center;
+            align-items: center;
+            width: 20px;
+            height: 30px;
+            margin-left: 10px;
+            margin-top: 4px;
+        }
+        #cc3{
+            display: flex;
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            border-radius: 100px;
+        }
+        .games{
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            width: 220px;
+            height: 250px;
+            background-color: #301C57;
+            border-radius: 15px;
+        }
+        .pho{
+            display: flex;
+            flex-direction: column;
+            width: 180px;
+            height: 150px;
+            margin-left: 22px;
+        }
+        h3{
+            display: flex;
+            flex-direction: column;
+            color: white;
+            margin-top: -3px;
+            margin-left: 15px;
+        }
+        #heart{
+            display: flex;
+            cursor: pointer;
+            position: relative;
+            flex-direction: row;
+            width: 10px;
+            height: 10px;
+            margin-left: 40px;
+            margin-top: 3px;
+        }
+        #hea{
+            display: flex;
+            cursor: pointer;
+            flex-direction: row;
+        }
+        h4{
+            margin-top: 1px;
+            margin-left: 5px;
+            color: white;
+            font-size: 12px;
+        }
+        #dow{
+            cursor: pointer;
+            margin-left: 15px;
+            margin-top: -20px;
+        }
+        p2{
+            color: white;
+            margin-top: -9px;
+            font-size: 12px;
+            padding-left: 15px;
+            padding-right: 1px;
+        }
+        .ava{
+            margin-top: 4px;
+            margin-left: 17px;
+        }
+        .window{
+            cursor: pointer;
+            margin-right: 5px;
+        }
+        .ios{
+            cursor: pointer;
+            margin-right: 5px;
+        }
+        .play{
+            cursor: pointer;
+            margin-right: 50px;
+        }
+        .downlo{
+            cursor: pointer;
+            width: 90px;
+            height: 25px;
+            background-color: #4B0ACE;
+            color: white;
+            border-color: transparent;
+            border-radius: 5px;
+        }
+        .g11{
+            display: flex;
+            position: relative;
+            flex-direction: row;
+            margin-top: 20px;
+            margin-left: 1px;
+            margin-bottom: 1px;
+        }
+        #g12{
+            margin-left: 19px;
+            margin-bottom: 3px;
+        }
+        .new{
+            display: flex;
+            flex-direction: row;
+        }
+        #sidenav{
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            margin-top: 70px;
+            width: 400px;
+            height: 922px;
+            margin-left: 180px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            background-color: #301C57;
+            /* z-index: -5; */
+        }
+        #sid{
+            width: 310px;
+            height: 280px;
+            margin-left: 44px;
+            margin-bottom: 15px;
+            margin-top: 15px;
+            border-radius: 10px;
+        }
+        #sign{
+            display: flex;
+            cursor: pointer;
+            width: 200px;
+            border-radius: 10px;
+            height: 40px;
+            margin-top: 420px;
+            background-color: rgba(128, 128, 128, 0.048);
+        }
+        p7{
+            margin-top: 3px;
+            color: white;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        h5{
+            color: white;
+            font-size: 25px;
+            margin-bottom: 14px;
+            margin-top: 0px;
+            margin-left: 20px;
+        }
+        #si{
+            display: flex;
+            flex-direction: row;
+        }
+        #heart1{
+            cursor: pointer;
+            position: absolute;
+        margin-left: 160px;
+        padding-top: 10px;
+        width: 15px;
+        }
+        p8{
+            position: absolute;
+            color: white;
+            margin-left: 240px;
+            margin-top: 7.5px;
+        }
+        p9{
+            position: absolute;
+            color: white;
+            margin-left: 180px;
+            margin-top: 7.5px;
+        }
+        #download1{
+            cursor: pointer;
+            position: absolute;
+            width: 15px;
+            margin-left: 220px;
+            padding-top: 10px;
+        }
+        #ellipse{
+            cursor: pointer;
+            width: 60px;
+            height: 60px;
+            border: 3px solid #533391;
+            border-radius: 100px;
+            margin-top: 30px;
+            margin-left: 20px;
+        }
+        #badge{
+            width: 40px;
+            height: 70px;
+            margin-top: -7px;
+            margin-left: 10px;
+        }
+        #c12
+        {
+            margin-left: -20px;
+        }
+        p90{
+            color: white;
+            position: absolute;
+            font-size: 21px;
+            font-weight: bold;
+            margin-left: 29px;
+        }
+        h0{
+            position: absolute;
+            color:#787686;
+            font-size: 19px;
+            margin-left: 29px;
+            margin-top: 35px;
+        }
+        #ellipse1{
+            cursor: pointer;
+            width: 60px;
+            height: 60px;
+            border: 3px solid #533391;
+            border-radius: 100px;
+            margin-top: -65px;
+            margin-left: 200px;
+        }
+        h8{
+            color: #4B0ACE;
+            font-family: 'Tinos', serif;
+            font-weight: bold;
+            margin-top: 10px;
+            font-size: large;
+            margin-left: 10px;
+        }
+        #signo{
+            margin-left: 50px;
+        }
+        #ml{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 25px;
+            color: rgb(255, 255, 255);
+            background-color: #F63D13;
+            height: 25px;
+            border-radius: 20px;
+            margin-top: -3px;
+            margin-left: 60px;
+        }
+        #ml1{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 25px;
+            color: rgb(255, 255, 255);
+            background-color: #F63D13;
+            height: 25px;
+            border-radius: 20px;
+            margin-top: -3px;
+            margin-left: 73px;
+        }
+        #or{
+            width: 10px;
+            height: 10px;
+            background-color: #ff2f00;
+            border-radius: 20px;
+            margin-left: 30px;
+        }
+        #gs:hover{
+            color: black;
+            background-color: #cdcdcd82;
+        }
+        #MLib:hover{
+            color: black;
+            background-color: #cdcdcd82;
+        }
+        #tm:hover{
+            color: black;
+            background-color: #cdcdcd82;
+
+        }
+        #lst:hover{
+            color: black;
+            background-color: #cdcdcd82;
+        }
+        #ba:hover{
+            color: black;
+            background-color: #cdcdcd82;
+        }
+        #tp:hover{
+            color: black;
+            background-color: #cdcdcd82;
+        }
+        #sear{
+            cursor: pointer;
+            width: 15px;
+            height: 15px;
+            margin-top: 16px;
+            margin-left: -54px;
+            margin-right: 15px;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <img src="Logo.svg" alt="Sorry" id="fi">
+        <input type="input" placeholder="Search game..." id="box">
+        <img src="search.svg" alt=".." id="sear">
+        <div class="new">
+            <div id="sidenav">
+                <img src="wcc_bg_mob_img.webp" alt="sorry" id="sid">
+                <div id="si">
+                    <h5>WCC2</h5>
+                    <div>
+                        <img src="hearct.svg" alt="sorry" id="heart1">
+                        <p9>999</p9>
+                        <img src="icon-download.svg" alt="sorry" id="download1">
+                        <p8>891.8k</p8>
+                    </div>
+                </div>
+                <p7>
+                    WCC2 is a free (multiplayer only) game where each player can play using a single key on a keyboard. Press a key to join, then hold that key to turn the vehicle. Clash into players, shoot projectiles or trick them into driving off the ledge…
+                </p7>
+                <p7>
+                    WCC2 is a free (multiplayer only) game where each player can play using a single key on a keyboard. Press a key to join, then hold that key to turn the vehicle. Clash into players, shoot projectiles or trick them into driving off the ledge…
+                </p7>
+                <p7>
+                    WCC2 is a free (multiplayer only) game where each player can play using a single key on a keyboard. Press a key to join, then hold that key to turn the vehicle. Clash into players, shoot projectiles or trick them into driving off the ledge…
+                </p7>
+                <p7>
+                    WCC2 is a free (multiplayer only) game where each player can play using a single key on a keyboard. Press a key to join, then hold that key to turn the vehicle. Clash into players, shoot projectiles or trick them into driving off the ledge…
+                </p7>
+                <p7>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi autem sunt consectetur totam alias quo eligendi reiciendis nobis fuga beatae ab corrupti quidem blanditiis laborum minus officia dicta laboriosam.
+                </p7>
+                <div id="ellipse">
+                    <img src="Replace Your Image.svg" alt="sorry" id="badge">
+                    <p90>8.2</p90>
+                    <h0>Star Game</h0>
+                </div>
+                <div id="ellipse1">
+                    <img src="cup.svg" alt="sorry" id="badge">
+                    <p90>15</p90>
+                    <h0>Awards Game</h0>
+                </div>
+            </div>
+        </div>
+        <div class="ci"><img src="fire.svg" alt="?" class="fire"></div>
+        <div class="ci" id="c1">
+            <div id="or">
+                <img src="icon Notification.svg" alt="?" class="fire" id="c12">
+            </div>
+        </div>
+        <div class="ci" id="c2"><img src="troph.svg" alt="?" class="fire"></div>
+        <div class="ci" id="c3"><img src="3052726.jpg" alt="sorry" id="cc3"></div>
+        <div id="head" class="ui">
+            <img src="rocket 3D transparent 1.svg" alt="sorry" id="roc">
+            <div>
+                <p>
+                    3D Glass Assests Store & Free
+                </p>
+                <h1>
+                    High Quality Premium & free 3D assests.
+                </h1>
+                <button type="button" id="but">
+                    <img src="diamond.svg" alt=">>" class="di">
+                    Download Assests
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="pg">
+        <h2>Popular Games <img src="Path.svg" alt=">>" id="arrow"></h2>
+        <div class="g11">
+            <div class="games">
+                <img src="Rectangle 6.svg" alt="sorry" class="pho">
+                <div id="hea">
+                    <h3>WCC2</h3>
+                    <img src="hearct.svg" alt="sorry" id="heart">
+                    <h4>999</h4>
+                    <img src="icon-download.svg" alt="sorry" id="dow">
+                    <h4>234.8k</h4>
+                </div>
+                <p2>The Best Cricket Game you can find in internet at present...</p2>
+                <div class="ava">
+                    <img src="Window.svg" alt="windows" class="window">
+                    <img src="IOS.svg" alt="ios" class="ios">
+                    <img src="Google Play.svg" alt="play store" class="play">
+                    <button class="downlo">
+                        <a href="https://play.google.com/store/apps/details?id=com.nextwave.wcc2&hl=en_IN&gl=US" class="downlo" target="_blank">Download</a>
+                    </button>
+                </div>
+            </div>
+            <div class="games" id="g12">
+                <img src="Rectangle 6.svg" alt="sorry" class="pho">
+                <div id="hea">
+                    <h3>Sudoku</h3>
+                    <img src="hearct.svg" alt="sorry" id="heart">
+                    <h4>183</h4>
+                    <img src="icon-download.svg" alt="sorry" id="dow">
+                    <h4>134.8k</h4>
+                </div>
+                <p2>The Best Mind Game you can find in internet at present...</p2>
+                <div class="ava">
+                    <img src="Window.svg" alt="windows" class="window">
+                    <img src="IOS.svg" alt="ios" class="ios">
+                    <img src="Google Play.svg" alt="play store" class="play">
+                    <button class="downlo">
+                        <a href="https://play.google.com/store/apps/details?id=easy.sudoku.puzzle.solver.free&hl=en_IN&gl=US" class="downlo" target="_blank">Download</a>
+                    </button>
+                </div>
+            </div>
+            <div class="games" id="g12">
+                <img src="Rectangle 6.svg" alt="sorry" class="pho">
+                <div id="hea">
+                    <h3>FIFA</h3>
+                    <img src="hearct.svg" alt="sorry" id="heart">
+                    <h4>143</h4>
+                    <img src="icon-download.svg" alt="sorry" id="dow">
+                    <h4>190.4k</h4>
+                </div>
+                <p2>The Best Football Game you can find in internet at present...</p2>
+                <div class="ava">
+                    <img src="Window.svg" alt="windows" class="window">
+                    <img src="IOS.svg" alt="ios" class="ios">
+                    <img src="Google Play.svg" alt="play store" class="play">
+                    <button class="downlo">
+                        <a href="https://play.google.com/store/apps/details?id=com.ea.gp.fifamobile&hl=en_IN&gl=US"class="downlo" target="_blank">Download</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="g11">
+            <div class="games">
+                <img src="Rectangle 6.svg" alt="sorry" class="pho">
+                <div id="hea">
+                    <h3>Chess</h3>
+                    <img src="hearct.svg" alt="sorry" id="heart">
+                    <h4>193</h4>
+                    <img src="icon-download.svg" alt="sorry" id="dow">
+                    <h4>234.8k</h4>
+                </div>
+                <p2>The Best Genius Game you can find in internet at present...</p2>
+                <div class="ava">
+                    <img src="Window.svg" alt="windows" class="window">
+                    <img src="IOS.svg" alt="ios" class="ios">
+                    <img src="Google Play.svg" alt="play store" class="play">
+                    <button class="downlo">
+                        <a href="https://play.google.com/store/apps/details?id=com.chess&hl=en_IN&gl=US" class="downlo" target="_blank">Download</a>
+                    </button>
+                </div>
+            </div>
+            <div class="games" id="g12">
+                <img src="Rectangle 6.svg" alt="sorry" class="pho">
+                <div id="hea">
+                    <h3>PUBG</h3>
+                    <img src="hearct.svg" alt="sorry" id="heart">
+                    <h4>233</h4>
+                    <img src="icon-download.svg" alt="sorry" id="dow">
+                    <h4>134.8k</h4>
+                </div>
+                <p2>The Best adventurous Game you can find in internet at present...</p2>
+                <div class="ava">
+                    <img src="Window.svg" alt="windows" class="window">
+                    <img src="IOS.svg" alt="ios" class="ios">
+                    <img src="Google Play.svg" alt="play store" class="play">
+                    <button class="downlo">
+                        <a href="https://play.google.com/store/apps/details?id=com.tencent.ig&hl=en_IN&gl=US"class="downlo" target="_blank">Download</a>
+                    </button>
+                </div>
+            </div>
+            <div class="games" id="g12">
+                <img src="Rectangle 6.svg" alt="sorry" class="pho">
+                <div id="hea">
+                    <h3>Tekken</h3>
+                    <img src="hearct.svg" alt="sorry" id="heart">
+                    <h4>103</h4>
+                    <img src="icon-download.svg" alt="sorry" id="dow">
+                    <h4>190.4k</h4>
+                </div>
+                <p2>The Best Fighting Game you can find in internet at present...</p2>
+                <div class="ava">
+                    <img src="Window.svg" alt="windows" class="window">
+                    <img src="IOS.svg" alt="ios" class="ios">
+                    <img src="Google Play.svg" alt="play store" class="play">
+                    <button class="downlo">
+                        <a href="https://play.google.com/store/apps/details?id=com.fighting.game.taken.seven&hl=en_IN&gl=US" class="downlo" target="_blank">Download</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nav">
+        <ul class="me">
+            <button class="menu" id="dash"><img src="Shape.svg" alt="Sorry" class="ph">Dashboard</button>
+            <button class="menu" id="gs"onclick="con()"><img src="Shape (1).svg" alt="Sorry" class="ph"> Game Store</button>
+            <button class="menu" id="lst" onclick="con1()"><img src="livestream.svg" alt="sorry" class="ph"> Live Stream TV</button>
+            <button class="menu" id="tm" onclick="con2()"><img src="team.svg" alt="sorry" class="ph"> Teams Member</button>
+            <button class="menu" id="ba" onclick="con3()"><img src="badges.svg" alt="sorry" class="ph"> Badges</button>
+            <button class="menu" id="MLib"onclick="con4()"><img src="libra.svg" alt="sorry" class="ph">My Library<div id="ml">2</div></button>
+            <button class="menu" id="tp" onclick="con5()"><img src="thropies.svg" alt="sorry" class="ph"> Thropies
+                <div id="ml1">1
+                </div></button>
+            <div id="sign">
+                <img src="icon-sign-out.svg" alt="sorry" id="signo">
+                <h8>Log Out</h8>
+            </div>
+        </ul>
+    </div>
+    <script>
+        function con()
+        {
+            let t=false;
+            if(document.getElementById("gs").style.backgroundColor!='#4B0ACE' && document.getElementById("gs").style.color!='#FFFFFF')
+            {
+                document.getElementById("gs").style.backgroundColor='#4B0ACE';
+                document.getElementById("gs").style.color='#FFFFFF';
+                t=true;
+            }
+        }
+        function con1()
+        {
+            if(document.getElementById("lst").style.backgroundColor!='#4B0ACE' && document.getElementById("lst").style.color!='#FFFFFF')
+            {
+                document.getElementById("lst").style.backgroundColor='#4B0ACE';
+                document.getElementById("lst").style.color='#FFFFFF';
+            }
+        }
+        function con2()
+        {
+            if(document.getElementById("tm").style.backgroundColor!='#4B0ACE' && document.getElementById("tm").style.color!='#FFFFFF')
+            {
+                document.getElementById("tm").style.backgroundColor='#4B0ACE';
+                document.getElementById("tm").style.color='#FFFFFF';
+            }
+        }
+        function con3()
+        {
+            if(document.getElementById("ba").style.backgroundColor!='#4B0ACE' && document.getElementById("ba").style.color!='#FFFFFF')
+            {
+                document.getElementById("ba").style.backgroundColor='#4B0ACE';
+                document.getElementById("ba").style.color='#FFFFFF';
+            }
+        }
+        function con4()
+        {
+            if(document.getElementById("MLib").style.backgroundColor!='#4B0ACE' && document.getElementById("MLib").style.color!='#FFFFFF')
+            {
+                document.getElementById("MLib").style.backgroundColor='#4B0ACE';
+                document.getElementById("MLib").style.color='#FFFFFF';
+            }
+        }
+        function con5()
+        {
+            if(document.getElementById("tp").style.backgroundColor!='#4B0ACE' && document.getElementById("tp").style.color!='#FFFFFF')
+            {
+                document.getElementById("tp").style.backgroundColor='#4B0ACE';
+                document.getElementById("tp").style.color='#FFFFFF';
+            }
+        }
+    </script>
+</body>
+</html>
